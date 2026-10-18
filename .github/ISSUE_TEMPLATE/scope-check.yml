@@ -1,0 +1,39 @@
+name: Service scope inquiry
+description: Non-binding inquiry using synthetic examples only. No payment collected here.
+title: "Scope inquiry: "
+body:
+  - type: markdown
+    attributes:
+      value: "Public issue: do not attach real files, personal data, confidential information, emails, credentials or payment details. Use invented examples only."
+  - type: dropdown
+    id: package
+    attributes:
+      label: Proposed service
+      options:
+        - One-file mapping — US$39
+        - Repeatable import setup — US$129
+        - Unsure — scope check
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: File counts, approximate sizes, and input/output columns
+      description: Include a few invented input/output rows. No real customer files.
+    validations:
+      required: true
+  - type: input
+    id: deadline
+    attributes:
+      label: Desired deadline and timezone
+    validations:
+      required: true
+  - type: checkboxes
+    id: acknowledgement
+    attributes:
+      label: Scope acknowledgement
+      options:
+        - label: I understand this is a public, non-binding inquiry and payment/availability are not confirmed.
+          required: true
+        - label: My examples contain no personal, confidential or credential data.
+          required: true

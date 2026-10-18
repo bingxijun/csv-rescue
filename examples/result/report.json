@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "input_sha256": "2cf83721210f7fe32dee3fa6e12d92d3a56dc1bcf68e10d91f070db4a8029593",
+  "rows_in": 3,
+  "rows_out": 3,
+  "source_columns": [
+    "Supplier SKU",
+    "Product Name",
+    "Price",
+    "Internal note"
+  ],
+  "mapping": {
+    "sku": "Supplier SKU",
+    "name": "Product Name",
+    "price": "Price"
+  },
+  "unmapped_source_columns": [
+    "Internal note"
+  ],
+  "rules": {
+    "columns": {
+      "sku": "Supplier SKU",
+      "name": "Product Name",
+      "price": "Price"
+    },
+    "trim": [
+      "name"
+    ],
+    "required": [
+      "sku"
+    ],
+    "key": [
+      "sku"
+    ]
+  },
+  "changes": [
+    {
+      "record": 1,
+      "column": "name",
+      "operation": "trim"
+    }
+  ],
+  "missing_required": [
+    {
+      "record": 3,
+      "column": "sku"
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "records": [
+        1,
+        2
+      ]
+    }
+  ],
+  "spreadsheet_review_escaped_cells": 1,
+  "record_numbering": "1-based data records, excluding the header; not physical lines",
+  "limitations": [
+    "Duplicate and missing-value findings require review; no records were removed.",
+    "Canonical data.csv retains formula-like strings. Do not open it directly in a spreadsheet.",
+    "spreadsheet_review.csv prefixes formula-like text with apostrophes; CSV cannot enforce text typing or guarantee spreadsheet safety after re-saving.",
+    "Import ID and price columns explicitly as text to preserve their display in spreadsheet applications.",
+    "No target platform import or business-rule correctness is implied by these checks."
+  ]
+}

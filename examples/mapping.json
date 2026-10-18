@@ -1,0 +1,6 @@
+{
+  "columns": {"sku": "Supplier SKU", "name": "Product Name", "price": "Price"},
+  "trim": ["name"],
+  "required": ["sku"],
+  "key": ["sku"]
+}

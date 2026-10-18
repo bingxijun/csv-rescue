@@ -1,0 +1,4 @@
+Supplier SKU,Product Name,Price,Internal note
+0007," Blue, mug ",0012.50,Invented sample
+0007,=2+2,0,Formula-like sample text
+,Empty ID,9,Missing-key example
